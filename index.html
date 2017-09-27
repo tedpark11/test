@@ -2,12 +2,23 @@
 <head>
 
 <style type="text/css">
+.button {
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
 .a1 {
 	position: relative;
 	font-family: Verdana;
-	font-size: 20px;
+	font-size: 50px;
 	color: #888888;
 }
+
 </style>
 
 <script language="JavaScript">
@@ -56,7 +67,7 @@
 		if (document.layers) {
 			document.layers.layer1.document.open();
 			document.layers.layer1.document
-					.write("<span style='position:absolute;top:0px;left:0px;font-family:Verdana;font-size:20px;color:#888888;text-align:center'> "
+					.write("<span style='position:absolute;top:0px;left:0px;font-family:Verdana;font-size:30px;color:#888888;text-align:center'> "
 							+ OutPut + "</span>");
 			document.layers.layer1.document.close();
 		}
@@ -64,7 +75,7 @@
 	}
 
 	function StOp() {
-		setTimeout('clearTimeout(T)', 500);
+		setTimeout('clearTimeout(T)', 600);
 	}
 //-->
 </script>
@@ -72,17 +83,16 @@
 </head>
 
 <body>
-	<table border='0' width=250 height=50>
+	<table border='0' width=600 height=300>
 		<tr valign='middle'>
 			<td align='center'>
 				<form name=form>
-					<input type=button value='번호 생성'
+					<input type=button class=button value='번호 생성'
 						onClick="lotto();StOp()">
 				</form> <span id=layer1 class=a1>Result</span>
 			</td>
 		</tr>
 	</table>
-
 </body>
 
 </html>
